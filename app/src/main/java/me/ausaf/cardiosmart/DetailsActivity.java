@@ -1,24 +1,23 @@
 package me.ausaf.cardiosmart;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_details);
+
 
     }
 
-    public void handleSubmit(View v){
-        Intent myIntent = new Intent(MainActivity.this, HeartInfoActivity.class);
+    public void handleBack(View view) {
+        Intent myIntent = new Intent(this, HeartInfoActivity.class);
         startActivity(myIntent);
     }
-
 }

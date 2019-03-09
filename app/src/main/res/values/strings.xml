@@ -3,4 +3,9 @@
     <string name="login">SIGN IN</string>
     <string name="heart_info_title">My Heart</string>
     <string name="heart_status">Status</string>
+    <string name="details_title">Details</string>
+
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
