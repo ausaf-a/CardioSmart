@@ -11,14 +11,14 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class HeartInfoActivity extends AppCompatActivity {
 
+    boolean cDeath = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heart_info);
 
-
-        plotHRVData();
     }
 
     public void handleBack(View view) {
@@ -27,23 +27,14 @@ public class HeartInfoActivity extends AppCompatActivity {
     }
 
     public void handleStatusClick(View view){
-        Intent myIntent = new Intent(this, DetailsActivity.class);
-        startActivity(myIntent);
-    }
 
-    private void plotHRVData(){
-        GraphView graph = (GraphView) findViewById(R.id.hrv_graph);
-
-        DataPoint[] points = new DataPoint[50];
-
-        for(int i = 0; i < points.length; i++){
-            points[i] = new DataPoint(i, Math.sin(i));
-        }
-
-
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(points);
-        graph.addSeries(series);
     }
 
 
+    public void handleSimClick(View view) {
+        cDeath = !cDeath;
+    }
+
+    public void showTips(View view) {
+    }
 }

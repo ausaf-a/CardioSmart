@@ -9,16 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".DetailsActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_details"
-            android:parentActivityName=".HeartInfoActivity">
 
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.ausaf.cardiosmart.HeartInfoActivity" />
-        </activity>
 
         <activity android:name=".HeartInfoActivity" />
 
