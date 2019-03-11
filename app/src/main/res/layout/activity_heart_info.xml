@@ -5,7 +5,7 @@
     tools:context=".HeartInfoActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/backdrop"
     android:background="@color/colorPrimary">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:id="@+id/back_btn"
             android:layout_width="20dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:background="@drawable/ic_back_arrow"
             android:onClick="handleBack"
             android:paddingHorizontal="10dp" />
@@ -30,8 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:fontFamily="@font/roboto_light"
             android:gravity="center"
 
@@ -47,9 +45,8 @@
 
 
     <LinearLayout
-        android:layout_below="@id/title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="20dp"
         android:orientation="vertical">
         <TextView
@@ -57,7 +54,6 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
 
-            android:layout_centerVertical="true"
             android:fontFamily="@font/roboto_light"
             android:gravity="left"
 
@@ -70,7 +66,15 @@
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="10dp">
 
+
         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/smallHeart"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:paddingTop="10dp"
@@ -79,14 +83,37 @@
 
 
             <ImageView
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
+                android:id="@+id/smallHeart"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="-5dp"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                app:srcCompat="@drawable/ic_heartbeat" />
+                app:srcCompat="@drawable/ic_heartbeat"
+                android:contentDescription="@string/todo" />
+
+
+
+        </RelativeLayout>'
+
+            <!--com.github.mikephil.charting.charts.LineChart
+                android:layout_below="@id/topbar"
+                android:id="@+id/chart"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/-->
+
+
+            <!--add canvas here-->
+            <me.ausaf.cardiosmart.HeartRateView
+                android:id="@+id/ppg"
+                android:layout_below="@id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                />
 
         </RelativeLayout>
+
     </android.support.v7.widget.CardView>
 
         <TextView
@@ -94,7 +121,6 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
 
-            android:layout_centerVertical="true"
             android:fontFamily="@font/roboto_light"
             android:gravity="left"
 
@@ -123,7 +149,7 @@
                     android:paddingBottom="10dp"
                     android:fontFamily="@font/roboto_light"
                     android:gravity="center"
-                    android:text="Healthy"
+                    android:text="@string/healthy"
                     android:textColor="@color/colorHealthy"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -137,7 +163,8 @@
                     android:layout_marginTop="-40dp"
                     android:layout_centerHorizontal="true"
                     android:paddingBottom="30dp"
-                    app:srcCompat="@drawable/ic_heart_green" />
+                    app:srcCompat="@drawable/ic_heart_green"
+                    android:contentDescription="@string/todo" />
             </RelativeLayout>
 
 
@@ -146,10 +173,9 @@
         <Button
             android:id="@+id/tips"
             android:layout_marginTop="30dp"
-            android:layout_above="@id/simulate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Health Tips"
+            android:text="@string/view_health_tips"
             android:fontFamily="@font/roboto_light"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
@@ -162,10 +188,9 @@
         <Button
             android:id="@+id/simulate"
             android:layout_marginTop="5dp"
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Simulate Alert"
+            android:text="@string/simulate_alert"
             android:fontFamily="@font/roboto_light"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
