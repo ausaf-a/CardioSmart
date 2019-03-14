@@ -75,9 +75,9 @@ public class HeartInfoActivity extends AppCompatActivity {
         bg.setBackgroundColor(getColor(R.color.colorHealthy));
         smallHeart.setImageDrawable(getDrawable(R.drawable.ic_heartbeat_green));
 
-        Button tips = (Button) findViewById(R.id.tips);
+
         Button sim = (Button) findViewById(R.id.simulate);
-        tips.setTextColor(getColor(R.color.colorHealthy));
+
         sim.setTextColor(getColor(R.color.colorHealthy));
     }
 
@@ -98,9 +98,9 @@ public class HeartInfoActivity extends AppCompatActivity {
         heart.setImageDrawable(icon);
         bg.setBackgroundColor(getColor(R.color.colorPrimary));
         smallHeart.setImageDrawable(getDrawable(R.drawable.ic_heartbeat));
-        Button tips = (Button) findViewById(R.id.tips);
+    
         Button sim = (Button) findViewById(R.id.simulate);
-        tips.setTextColor(getColor(R.color.colorPrimary));
+
         sim.setTextColor(getColor(R.color.colorPrimary));
     }
 
